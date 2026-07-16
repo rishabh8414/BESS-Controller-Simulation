@@ -24,5 +24,46 @@ This project bridges electrical grid simulation with data science, demonstrating
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/YOUR_GITHUB_USERNAME/BESS-Controller-Simulation.git](https://github.com/https://github.com/rishabh8414/BESS-Controller-Simulation.git)
+git clone https://github.com/rishabh8414/BESS-Controller-Simulation.git
 cd BESS-Controller-Simulation
+
+**2. Install required dependencies
+Ensure you have Python installed, then run:
+´´´´bash
+pip install pandapower pandas numpy matplotlib numba
+
+💻 Usage
+The project is broken down into three main scripts for modularity:
+
+**1. Run the Simulation
+Executes the power grid simulation and saves the raw data to a local /results folder.
+
+´´´bash
+python bess_simulation.py
+
+**2. View and Export Results
+Reads the generated .p (Pickle) files, prints the tabular data to the console, and exports a clean soc_results_excel.csv file.
+
+´´´bash
+python view_results.py
+
+**3. Generate Visualizations
+Creates a side-by-side graph of the Power Output and State of Charge, saving the output as bess_performance_graph.png.
+
+´´´bash
+python plot_results.py
+
+**📊 Simulation Results
+The simulation executes a predefined power schedule over four 15-minute intervals.
+
+Negative Power: Battery acts as a load (Charging).
+
+Positive Power: Battery acts as a generator (Discharging).
+
+(<img width="3600" height="1500" alt="bess_performance_graph" src="https://github.com/user-attachments/assets/710132c5-2821-4ff0-8634-5b7157e2bd13" />)
+
+**👨‍💻 Author
+Rushabh Sutariya
+Master of Engineering, Renewable Energy Systems
+www.linkedin.com/in/rishabh-sutariya-337b33257
+rushabhsutariya6.de@gmail.com
